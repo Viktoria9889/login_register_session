@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <title>title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <%- include('navBar'); %>
+        <h1>Вхід</h1>
+
+        <div id="login" class="btn_a_wrapper">
+            <h2>Ввійти в магазин</h2>
+            <form action="/auth/login" method="POST" class="login-form">
+                <div>
+                    <input id="email" name="email" type="email" class="validate" required>
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="Введіть email"></span>
+                </div>
+
+                <div class="input-field">
+                    <input id="password" name="password" type="password" class="validate" required>
+                    <label for="password">Пароль</label>
+                    <span class="helper-text" data-error="Введіть пароль"></span>
+                </div>
+
+                <button type="submit">Ввійти</button>
+            </form>
+        </div>
+        <div id="register">
+            <h2>Зареєструватись</h2>
+            <form action="/auth/register" method="POST" class="register-form">
+                <div>
+                    <input id="rEmail" name="email" type="email" class="validate" required>
+                    <label for="rEmail">Email</label>
+                    <span class="helper-text" data-error="Введіть email"></span>
+                </div>
+
+                <div>
+                    <input id="rPassword" name="password" type="password" class="validate" required>
+                    <label for="rPassword">Пароль</label>
+                    <span class="helper-text" data-error="Введіть пароль"></span>
+                </div>
+
+                <div>
+                    <input id="confirm" name="confirm" type="password" class="validate" required>
+                    <label for="confirm">Пароль ще раз</label>
+                    <span class="helper-text" data-error="Введіть пароль"></span>
+                </div>
+
+                <div>
+                    <input id="name" name="name" type="text" class="validate" required>
+                    <label for="name">Ваше ім'я</label>
+                    <span class="helper-text" data-error="Введіть ваше ім'я"></span>
+                </div>
+
+                <button type="submit">Зареєструватись</button>
+            </form>
+        </div>
+
+
+
+
+        <script src="./js/login.js"></script>
+</body>
+
+</html>
