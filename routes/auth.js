@@ -24,7 +24,6 @@ router.post('/login', async (req, res) => {
 
             if (areSame) {
                 req.session.user = candidate
-                //req.session.isAuthenticated = true
                 //добавляєм логіку щоб точно дочекатись поки юзер зайде
                 req.session.save(err => {
                     if (err) {
