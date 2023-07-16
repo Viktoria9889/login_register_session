@@ -13,56 +13,58 @@
 <body>
 
     <%- include('navBar'); %>
-        <h1>Вхід</h1>
+    <div class="wrapper_login">
+        <div class="conteiner">
+            <div class="block">
+                <section class="block__item block-item">
+                    <h2 class="block-item__title">Уже є аккаунт</h2>
+                    <button class="block-item__btn signin-btn">Ввійти</button>
+                </section>
+                <section class="block__item block-item">
+                    <h2 class="block-item__title">Ще немає аккаунта</h2>
+                    <button class="block-item__btn signup-btn">Зареєструватись</button>
+                </section>
 
-        <div id="login" class="btn_a_wrapper">
-            <h2>Ввійти в магазин</h2>
-            <form action="/auth/login" method="POST" class="login-form">
-                <div>
-                    <input id="email" name="email" type="email" class="validate" required>
-                    <label for="email">Email</label>
-                    <span class="helper-text" data-error="Введіть email"></span>
-                </div>
+                <div class="form-box">
+                    <form action="/auth/login" method="POST" class="form form_signin">
+                        <h3 class="form__title">Вхід</h3>
+                        <p>
+                            <input id="email" name="email" type="email" class="fotm__input" placeholder="Email" required>
+                        </p>
+                        <p>
+                            <input id="password" name="password" type="password" class="fotm__input" placeholder="Пароль" required>
+                        </p>
+                        <p>
+                            <button class="form__btn" type="submit">Ввійти</button>
+                        </p>
+                    </form>
 
-                <div class="input-field">
-                    <input id="password" name="password" type="password" class="validate" required>
-                    <label for="password">Пароль</label>
-                    <span class="helper-text" data-error="Введіть пароль"></span>
-                </div>
 
-                <button type="submit">Ввійти</button>
-            </form>
+
+                    <form action="/auth/register" method="POST" class="form form_signup">
+                        <h3 class="form__title">Реєстрація</h3>
+                        <p>
+                            <input id="rEmail" name="email" type="email" class="fotm__input" placeholder="Email" required>
+                        </p>
+                        <p>
+                            <input id="rPassword" name="password" type="password" class="fotm__input" placeholder="Пароль" required>
+                        </p>
+                        <p>
+                            <input id="confirm" name="confirm" type="password" class="fotm__input" placeholder="Пароль ще раз" required>
+                        </p>
+                        <p>
+                            <input id="name" name="name" type="text" class="fotm__input" placeholder="Ваше ім'я" required>
+                        </p>
+                        <p>
+                            <button type="submit" class="form__btn form__btn_signup">Реєстрація</button>
+                        </p>
+                    </form>
+
+                </div><div class="form_signup__"></div>
+                
+            </div>
         </div>
-        <div id="register">
-            <h2>Зареєструватись</h2>
-            <form action="/auth/register" method="POST" class="register-form">
-                <div>
-                    <input id="rEmail" name="email" type="email" class="validate" required>
-                    <label for="rEmail">Email</label>
-                    <span class="helper-text" data-error="Введіть email"></span>
-                </div>
-
-                <div>
-                    <input id="rPassword" name="password" type="password" class="validate" required>
-                    <label for="rPassword">Пароль</label>
-                    <span class="helper-text" data-error="Введіть пароль"></span>
-                </div>
-
-                <div>
-                    <input id="confirm" name="confirm" type="password" class="validate" required>
-                    <label for="confirm">Пароль ще раз</label>
-                    <span class="helper-text" data-error="Введіть пароль"></span>
-                </div>
-
-                <div>
-                    <input id="name" name="name" type="text" class="validate" required>
-                    <label for="name">Ваше ім'я</label>
-                    <span class="helper-text" data-error="Введіть ваше ім'я"></span>
-                </div>
-
-                <button type="submit">Зареєструватись</button>
-            </form>
-        </div>
+    </div>
 
 
 

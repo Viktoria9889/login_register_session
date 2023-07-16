@@ -1,0 +1,151 @@
+ul li {
+  list-style: none;
+}
+
+.wrapper_login {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(220, 115, 115, 0.8862745098);
+}
+
+.wrapper_login.active {
+  background-color: rgba(220, 115, 115, 0.8862745098);
+  transition: 0.5s;
+}
+
+nav {
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  min-height: 60px;
+  display: block;
+  padding: 10px 20px;
+  line-height: 60px;
+}
+
+.conteiner {
+  width: 800px;
+  height: 500px;
+  padding: 40px;
+  position: relative;
+}
+
+.block {
+  height: 100%;
+  background-color: aliceblue;
+  box-shadow: 0 5px 45px #000;
+  display: flex;
+  align-items: center;
+}
+
+.block__item {
+  width: 50%;
+}
+
+.block-item {
+  text-align: center;
+}
+
+.block-item__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.block-item__btn {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgba(115, 99, 79, 0.689);
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-box {
+  background: #fff;
+  height: 100%;
+  width: 50%;
+  box-shadow: 0 5px 45px #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.form-box.active {
+  left: 50%;
+}
+
+.form {
+  width: 100%;
+  padding: 50px;
+  font-size: 16px;
+  position: absolute;
+}
+
+.form__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.fotm__input {
+  width: 70%;
+  padding: 10px;
+  border: solid 1px #333;
+  font-size: inherit;
+}
+
+.form__btn {
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: rgba(220, 115, 115, 0.8862745098);
+  color: #333;
+  padding: 10px 50px;
+}
+
+.form__btn_signup {
+  background-color: rgba(220, 115, 115, 0.8862745098);
+}
+
+.form_signin {
+  left: 0;
+}
+
+.form_signup {
+  left: 100%;
+}
+
+.form-box.active .form_signin {
+  left: -100%;
+}
+
+.form-box.active .form_signup {
+  left: 0;
+}/*# sourceMappingURL=main.css.map */
