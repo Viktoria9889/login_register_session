@@ -1,6 +1,6 @@
 const express = require('express')
 const server = express()
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 
@@ -16,8 +16,6 @@ server.use(session({
         client: mongoose.connection.getClient()
     })
 }))
-
-
 
 const homeRoutes = require('./routes/home')
 const loginRoutes = require('./routes/auth')
