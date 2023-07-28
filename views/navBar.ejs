@@ -1,7 +1,13 @@
 <nav>
   <ul>
+    <% if (isAuth) { %>
+      <li><a href="/">Головна сторінка</a></li>
+      <li><a href="/secretPage">Секретна сторінка</a></li>
+      <li><a href="/auth/logout">Вийти</a></li>>
+    <%} else { %>
       <li><a href="/">Головна сторінка</a></li>
       <li><a href="/auth">Вхід</a></li>
       <li><a href="/auth/logout">Вийти</a></li>
+    <% } %>
   </ul>
 </nav>
